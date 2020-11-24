@@ -31,14 +31,16 @@ Make touchpad setting permanent
 
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)
 
+In `.profile` change default browser to `brave`
+
 Now to edit i3wm config
-- `exec --no-startup-id flameshot` and similar for `urxvt`, `brave`, `code`, `slack`
-- 
-
-
+TODO: Add changes that start the apps 
 
 Add Bitwarden to Brave and pin it to the thingy bar
 
+
+TODO: Prevent need login
+TODO: Prevent screensasver
 
 
 
