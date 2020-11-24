@@ -1,5 +1,5 @@
 # manjaro-setup
-Rough aide-memoire for how I set up Manjaro for me
+## Rough aide-memoire for how I set up Manjaro for me
 
 Boot to USB stick, enter wifi details and select install from the modal
 
@@ -15,6 +15,8 @@ Install Peek
 
 Install VS Code (visual-studio-code-bin)
 
+Remove palemoon
+
 Install Brave
 
 Install Slack (slack-desktop)
@@ -29,6 +31,13 @@ Make touchpad setting permanent
 
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)
 
+Now to edit i3wm config
+- `exec --no-startup-id flameshot` and similar for `urxvt`, `brave`, `code`, `slack`
+- 
+
+
+
+Add Bitwarden to Brave and pin it to the thingy bar
 
 
 
