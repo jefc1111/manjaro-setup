@@ -33,14 +33,17 @@ Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)
 
 In `.profile` change default browser to `brave`
 
-Now to edit i3wm config
-TODO: Add changes that start the apps 
+Now to edit i3wm config  
+TODO: Add changes that start the apps   
 
 Add Bitwarden to Brave and pin it to the thingy bar
 
+Disable screen locking (look for `xautolock` in i3 config and comment it out)
 
-TODO: Prevent need login
-TODO: Prevent screensasver
+To get autologin to work properly I also had to configure PAM  
+
+TODO: AWS cmd line tools & my IP script
+TODO: 
 
 
 
