@@ -44,6 +44,9 @@ To get autologin to work properly I also had to configure PAM
 
 TODO: AWS cmd line tools & my IP script
 TODO: 
+install mysql workbench  
+install studio 3t  
+
 
 
 
