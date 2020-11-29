@@ -40,7 +40,26 @@ Add Bitwarden to Brave and pin it to the thingy bar
 
 Disable screen locking (look for `xautolock` in i3 config and comment it out)
 
-To get autologin to work properly I also had to configure PAM  
+### Getting autologin working. 
+Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
+
+In /etc/lightdm/lightdm.conf
+```
+pam-service=lightdm-autologin
+#pam-autologin-service=lightdm-autologin
+#pam-greeter-service=lightdm-greeter
+autologin-guest=false
+autologin-user=jef
+autologin-user-timeout=0
+```
+
+In /etc/pam.d/lightdm I added
+```
+auth        sufficient  pam_succeed_if.so user ingroup nopasswdlogin
+auth        include     system-login
+```
+I also made sure my user was in groups `autologin` and `nopasswdlogin`. 
+I doubt _all_ of this was necessary. I got stuck for a while whwre I would still get a login screen but was able to click <enter>. The fix for this was commenting out `pam-greeter-service` in lightdm config. This was a step which I hasn't specifically seen recommended anywhere. 
 
 TODO: AWS cmd line tools & my IP script
 TODO: 
