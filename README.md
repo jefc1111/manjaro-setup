@@ -25,15 +25,28 @@ Make touchpad setting permanent
 - `sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf` and add `Option "AccelSpeed" "0.8"`
 
 ### Miscellaneous
-Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)
-In `.profile` change default browser to `brave`
+Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
+In `.profile` change default browser to `brave`  
+Disable screen locking (look for `xautolock` in i3 config and comment it out)  
 
 ### i3wm config  
-TODO: Add changes that start the apps   
+To start some apps I have this right at the bottom of the file;
+```
+exec --no-startup-id flameshot
+exec --no-startup-id urxvt
+exec --no-startup-id brave
+exec --no-startup-id code
+exec --no-startup-id slack
+exec "sleep 10; /home/jef/my-scripts/after-startup.sh"
+```
 
-
-
-Disable screen locking (look for `xautolock` in i3 config and comment it out)
+The contents of `after-startup.sh` is;
+```
+#!/bin/bash
+i3-msg [class="Brave-browser"] move container to workspace 2
+i3-msg [class="Slack"] move container to workspace 3
+i3-msg [class="Code"] move container to workspace 4
+```
 
 ### Getting autologin working
 Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
@@ -58,11 +71,16 @@ I doubt _all_ of this was necessary. I got stuck for a while where I would still
 
 
 
-TODO: AWS cmd line tools & my IP script
-TODO: 
-install mysql workbench  
-install studio 3t  
+TODO: AWS cmd line tools & my IP script  
+TODO:   
+install mysql workbench    
+install studio 3t    
 
+
+
+
+#### Notes
+Use `xprop` to find the class name for moving apps to workspaces and so on (https://www.reddit.com/r/i3wm/comments/3h94t9/how_to_find_a_name_of_a_program_to_use_for/)
 
 
 
