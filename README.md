@@ -26,6 +26,7 @@ Make touchpad setting permanent
 
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
+
 In `.profile` change default browser to `brave`  
 
 ### i3wm config  
