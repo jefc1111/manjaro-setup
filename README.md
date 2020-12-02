@@ -27,7 +27,6 @@ Make touchpad setting permanent
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
 In `.profile` change default browser to `brave`  
-Disable screen locking (look for `xautolock` in i3 config and comment it out)  
 
 ### i3wm config  
 To start some apps I have this right at the bottom of the file;
@@ -47,6 +46,14 @@ i3-msg [class="Brave-browser"] move container to workspace 2
 i3-msg [class="Slack"] move container to workspace 3
 i3-msg [class="Code"] move container to workspace 4
 ```
+
+Disable screen locking (look for `xautolock` and comment it out)  
+
+Disable nitrogen
+
+Change conky to the green version (should be a commented out line that can be swapped with currently enabled one)
+
+
 
 ### Getting autologin working
 Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
