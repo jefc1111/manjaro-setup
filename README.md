@@ -48,6 +48,8 @@ i3-msg [class="Slack"] move container to workspace 3
 i3-msg [class="Code"] move container to workspace 4
 ```
 
+Aside: Various other solutions for pushing specific apps to different workspaces meant that _all_ windows for the given application would always open on the associated workspace. I want to be able to open a terminal next to my browser and things like that. 
+
 Disable screen locking (look for `xautolock` and comment it out)  
 
 Disable nitrogen
