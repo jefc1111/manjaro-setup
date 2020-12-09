@@ -6,6 +6,8 @@
 - Reboot into new Manjaro install and connect to wifi
 - Click the thing in the tray to bring up software manager. Install all updates. 
 - Click the three dots menu and allow install from AUR
+- Run `sudo pacman -Syy` to update package databases
+
 
 ### App installs
 - Install Flameshot
