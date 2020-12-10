@@ -27,7 +27,8 @@
 Make touchpad setting permanent
 - `sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf` and add `Option "AccelSpeed" "0.8"`
 
-### Making the touchscreen work
+### Making the touchscreen work (on X1 Extreme gen 3)
+Without doing this, I found on dual screens, the touch input thought it had the run of both screens, so would be offset (unless at the very botoom where it would 'catch up with itself')
 - `xinput` and find id of touchscreen
 - `xinput map-to-output 10 eDP1` changing parameters as required
 
@@ -65,7 +66,7 @@ Change conky to the green version (should be a commented out line that can be sw
 
 
 
-### Getting autologin working
+### Getting autologin working (this was on my W500 only)
 Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
 
 In /etc/lightdm/lightdm.conf
