@@ -10,6 +10,7 @@
 
 
 ### App installs
+- Install autorandr
 - Install Flameshot
 - Install Peek
 - Install VS Code (visual-studio-code-bin)
@@ -25,6 +26,10 @@
 
 Make touchpad setting permanent
 - `sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf` and add `Option "AccelSpeed" "0.8"`
+
+### Making the touchscreen work
+- `xinput` and find id of touchscreen
+- `xinput map-to-output 10 eDP1` changing parameters as required
 
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
