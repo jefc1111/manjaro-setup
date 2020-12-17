@@ -10,14 +10,16 @@
 
 
 ### App installs
-- Install autorandr
-- Install Flameshot
-- Install Peek
-- Install VS Code (visual-studio-code-bin)
+- autorandr
+- flameshot
+- peek
+- VS Code (visual-studio-code-bin)
 - Remove palemoon
-- Install Brave
-- Install Slack (slack-desktop)
+- Brave
+- Slack (slack-desktop)
 - Add Bitwarden to Brave and pin it to the thingy bar
+- Studio 3t
+- MySQL Workbench
 
 ### Tweak touchpad responsiveness
 - `xinput` to list devices
