@@ -87,6 +87,16 @@ auth        include     system-login
 I also made sure my user was in groups `autologin` and `nopasswdlogin`. 
 I doubt _all_ of this was necessary. I got stuck for a while where I would still get a login screen but was able to click <enter>. The fix for this was commenting out `pam-greeter-service` in lightdm config (as above). This was a step which I hasn't specifically seen recommended anywhere. 
 
+### Virtualization
+There was no kernel module for Virtualbox for the very recent kernel I am using, so I switched to `libvirt` / `kvm`.
+
+Then use `vagrant up --provider=libvirt`
+
+To avoid always being asked for root password I changed permissions on `/etc/exports` and also followed this: https://computingforgeeks.com/use-virt-manager-as-non-root-user/
+
+
+
+
 
 
 TODO: AWS cmd line tools & my IP script  
