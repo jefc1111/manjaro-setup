@@ -20,6 +20,7 @@
 - Add Bitwarden to Brave and pin it to the thingy bar
 - Studio 3t
 - MySQL Workbench
+- Mongo server (see https://wiki.archlinux.org/index.php/MongoDB)
 
 ### Tweak touchpad responsiveness
 - `xinput` to list devices
