@@ -34,6 +34,7 @@ Make touchpad setting permanent
 Without doing this, I found on dual screens, the touch input thought it had the run of both screens, so would be offset (unless at the very botoom where it would 'catch up with itself')
 - `xinput` and find id of touchscreen
 - `xinput map-to-output 10 eDP1` changing parameters as required
+- Add to i3 config or similar to survive reboot
 
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
