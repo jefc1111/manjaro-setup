@@ -102,9 +102,6 @@ To avoid always being asked for root password I changed permissions on `/etc/exp
 
 
 TODO: AWS cmd line tools & my IP script  
-TODO:   
-install mysql workbench    
-install studio 3t    
 
 
 
