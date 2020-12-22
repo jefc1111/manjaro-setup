@@ -33,8 +33,13 @@ Make touchpad setting permanent
 ### Making the touchscreen work (on X1 Extreme gen 3)
 Without doing this, I found on dual screens, the touch input thought it had the run of both screens, so would be offset (unless at the very botoom where it would 'catch up with itself')
 - `xinput` and find id of touchscreen
-- `xinput map-to-output 10 eDP1` changing parameters as required
+- `xinput map-to-output <relevant_output_id> eDP1` changing parameters as required
 - Add to i3 config or similar to survive reboot
+
+NOTE: `relevant_output_id` changes... so the above is not yet reliable. 
+
+### Annoying blip in headphones in URxvt
+Add `xset b off` to `~/.bashrc`
 
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
