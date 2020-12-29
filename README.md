@@ -40,6 +40,12 @@ Trouble is, the relevant id in `xinput` is not stable, so we have to get the id 
 
 This should be set to run on every dock / undock and on wake from suspend.
 
+### xrandr / autorandr set up
+This was complex for me because my built in screen is 4k (3840 × 2160) while the external screen is 2560x1440
+While docked, I am ok with the built in screen running at 1920x1080, but when undocked I want it at 3840 × 2160, but suitably scaled. 
+See the config file folder for more details.
+I also set `autorandr-c` to run on resume by following this https://archived.forum.manjaro.org/t/solved-run-command-upon-resume/58588/5
+
 ### Annoying blip in headphones in URxvt
 Add `xset b off` to `~/.bashrc`
 
