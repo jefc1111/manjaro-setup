@@ -34,9 +34,11 @@ Make touchpad setting permanent
 Without doing this, I found on dual screens, the touch input thought it had the run of both screens, so would be offset (unless at the very botoom where it would 'catch up with itself')
 - `xinput` and find id of touchscreen
 - `xinput map-to-output <relevant_output_id> eDP1` changing parameters as required
-- Add to i3 config or similar to survive reboot
 
-NOTE: `relevant_output_id` changes... so the above is not yet reliable. 
+Trouble is, the relevant id in `xinput` is not stable, so we have to get the id dynamically with some `awk` trickery;
+```xinput map-to-output `xinput | awk '/multitouch sensor Finger/ {print $9}' | grep -o '[0-9]\+'` eDP1```
+
+This should be set to run on every dock / undock and on wake from suspend.
 
 ### Annoying blip in headphones in URxvt
 Add `xset b off` to `~/.bashrc`
