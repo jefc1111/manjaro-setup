@@ -111,6 +111,29 @@ Then use `vagrant up --provider=libvirt`
 
 To avoid always being asked for root password I changed permissions on `/etc/exports` and also followed this: https://computingforgeeks.com/use-virt-manager-as-non-root-user/
 
+### Taking control of both fans (X1 Extreme)
+Had to switch to Manjaro testing branch and then upgrade to 510 kernel: https://www.reddit.com/r/thinkpad/comments/kadzkb/an_optimistic_x1_extreme_fan_noise_post_linux/
+
+Thinkfan: 
+Had to tweak `/etc/systemd/system/thinkfan.service.d` to `Environment='THINKFAN_ARGS=-b-3'` to prevent annoyingly frequent changes to fan speed. 
+
+`/etc/thinkfan.conf`;
+```ensors:
+  - hwmon: /sys/devices/platform/coretemp.0/hwmon
+    indices: [1, 2, 3, 4, 5]
+
+fans:
+  - tpacpi: /proc/acpi/ibm/fan
+
+levels:
+  - [0, 0, 40]
+  - [1, 40, 50]
+  - [2, 50, 55]
+  - [3, 55, 60]
+  - [4, 60, 65]
+  - [5, 65, 70]
+  - [7, 70, 32767]
+```
 
 
 
