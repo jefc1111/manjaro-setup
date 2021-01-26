@@ -50,7 +50,7 @@ I also set `autorandr-c` to run on resume by following this https://archived.for
 Add `xset b off` to `~/.bashrc`
 
 ### Showing slightly wrong time
-`sudo pacman -S ntp`
+`sudo pacman -S ntp`  
 `sudo timedatectl set-ntp true`
 
 ### Miscellaneous
