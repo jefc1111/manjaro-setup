@@ -49,6 +49,10 @@ I also set `autorandr-c` to run on resume by following this https://archived.for
 ### Annoying blip in headphones in URxvt
 Add `xset b off` to `~/.bashrc`
 
+### Showing slightly wrong time
+`sudo pacman -S ntp`
+`sudo timedatectl set-ntp true`
+
 ### Miscellaneous
 Add `alias ll="ls -al"` to `.bashrc` (don't forget to `source` it!)  
 
