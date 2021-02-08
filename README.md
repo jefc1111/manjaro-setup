@@ -85,7 +85,8 @@ Disable nitrogen
 
 Change conky to the green version (should be a commented out line that can be swapped with currently enabled one)
 
-
+### Disable screen lock when suspending
+Took ages to work this one out. There is a script called `i3exit` in `/usr/bin` that is referred to in the the i3 config file. It's in this script that `blurlock` is invoked. So just go ahead and edit that file, removing the call to `blurlock`
 
 ### Getting autologin working (this was on my W500 only)
 Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
