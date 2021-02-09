@@ -30,7 +30,7 @@
 Make touchpad setting permanent
 - `sudo nano /etc/X11/xorg.conf.d/30-touchpad.conf` and add `Option "AccelSpeed" "0.8"`
 
-### Making the touchscreen work (on X1 Extreme gen 3)
+### Making the touchscreen work (X1 Extreme gen 3)
 Without doing this, I found on dual screens, the touch input thought it had the run of both screens, so would be offset (unless at the very botoom where it would 'catch up with itself')
 - `xinput` and find id of touchscreen
 - `xinput map-to-output <relevant_output_id> eDP1` changing parameters as required
@@ -88,7 +88,7 @@ Change conky to the green version (should be a commented out line that can be sw
 ### Disable screen lock when suspending
 Took ages to work this one out. There is a script called `i3exit` in `/usr/bin` that is referred to in the the i3 config file. It's in this script that `blurlock` is invoked. So just go ahead and edit that file, removing the call to `blurlock`
 
-### Getting autologin working (this was on my W500 only)
+### Getting autologin working (W500)
 Even though I selected autologin at OS setup it still wasn't working. I went round the houses trying looooads of stuff. In the end I have this;
 
 In /etc/lightdm/lightdm.conf
@@ -109,14 +109,14 @@ auth        include     system-login
 I also made sure my user was in groups `autologin` and `nopasswdlogin`. 
 I doubt _all_ of this was necessary. I got stuck for a while where I would still get a login screen but was able to click <enter>. The fix for this was commenting out `pam-greeter-service` in lightdm config (as above). This was a step which I hasn't specifically seen recommended anywhere. 
 
-### Virtualization (X1 Extreme)
+### Virtualization (X1 Extreme gen 3)
 There was no kernel module for Virtualbox for the very recent kernel I am using, so I switched to `libvirt` / `kvm`.
 
 Then use `vagrant up --provider=libvirt`
 
 To avoid always being asked for root password I changed permissions on `/etc/exports` and also followed this: https://computingforgeeks.com/use-virt-manager-as-non-root-user/
 
-### Taking control of both fans (X1 Extreme)
+### Taking control of both fans (X1 Extreme gen 3)
 Had to switch to Manjaro testing branch and then upgrade to 510 kernel: https://www.reddit.com/r/thinkpad/comments/kadzkb/an_optimistic_x1_extreme_fan_noise_post_linux/
 
 Thinkfan: 
@@ -139,12 +139,6 @@ levels:
   - [5, 65, 70]
   - [7, 70, 32767]
 ```
-
-
-
-
-
-TODO: AWS cmd line tools & my IP script  
 
 
 
