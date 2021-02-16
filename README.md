@@ -1,5 +1,5 @@
 # manjaro-setup
-## Rough aide-memoire for how I set up Manjaro for me
+## Notes from setting up Manjaro a few times on a few different Thinkpads
 
 ### Initial setup 
 - Boot to USB stick, enter wifi details and select install from the modal
