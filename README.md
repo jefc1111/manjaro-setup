@@ -140,7 +140,8 @@ levels:
   - [7, 70, 32767]
 ```
 
-
+### Unable to adjust brightness and no backlight after suspend (P51s)
+Lots of potential solutions floating around. For me it was a case of doing this https://forum.manjaro.org/t/cant-adjust-screen-brightness-lenovo-laptop-nvidia-xfce/28771/13
 
 
 #### Notes
